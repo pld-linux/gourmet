@@ -13,7 +13,7 @@ BuildRequires:	python-PIL-devel
 BuildRequires:	python-gnome-desktop-print
 BuildRequires:	python-pygtk-devel
 BuildRequires:	python-sqlite
-Requires:	python-Reportlab
+Requires:	python-ReportLab
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
