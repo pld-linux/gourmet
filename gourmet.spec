@@ -1,15 +1,16 @@
 Summary:	Gourmet Recipe Manager is a simple but powerful recipe-managing application
 Summary(hu.UTF-8):	Gourmet Recipe Manager egy egyszerű, de hatékony recept-nyilvántartó alkalmazás
 Name:		gourmet
-Version:	0.13.8
+Version:	0.14.4
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/grecipe-manager/%{name}-%{version}.tar.gz
-# Source0-md5:	0b3886879403ad55112de0c2c177e918
+# Source0-md5:	81c4fbae57afebd165344519ad142357
 URL:		http://grecipe-manager.sourceforge.net/
 BuildRequires:	libglade2-devel
 BuildRequires:	python-PIL-devel
+BuildRequires:	python-ReportLab
 BuildRequires:	python-gnome-desktop-print
 BuildRequires:	python-pygtk-devel
 BuildRequires:	python-sqlite
