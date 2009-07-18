@@ -15,6 +15,7 @@ BuildRequires:	python-gnome-desktop-print
 BuildRequires:	python-pygtk-devel
 BuildRequires:	python-sqlite
 Requires:	python-ReportLab
+Requires:	python-sqlalchemy-migrate
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
