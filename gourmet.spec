@@ -20,6 +20,7 @@ BuildRequires:	python-gnome-desktop-print
 BuildRequires:	python-pygtk-devel
 BuildRequires:	python-sqlite
 Requires:	python-%{name} = %{version}-%{release}
+Requires:	python-sqlite
 Suggests:	python-gnome-extras-gtkspell
 #Suggests:	python-poppler
 BuildArch:	noarch
@@ -39,6 +40,7 @@ bevásárlólistát a gyűjteményed alapján.
 
 %package -n python-%{name}
 Summary:	Gourmet Python modules
+Summary(hu.UTF-8):	Gourmet Python modulok
 Summary(pl.UTF-8):	Moduły Pythona Gourmet
 Group:		Development/Languages/Python
 Requires:	python-ReportLab
@@ -46,7 +48,10 @@ Requires:	python-sqlalchemy-migrate
 %pyrequires_eq	python-modules
 
 %description -n python-%{name}
-This package provides Gourumet Recipe Manager Python modules.
+This package provides Gourmet Recipe Manager Python modules.
+
+%description -n python-%{name} -l hu.UTF-8
+Ez a csomag tartalmazza a Gourmet Recipe Manager Python moduljait.
 
 %description -n python-%{name} -l pl.UTF-8
 Moduły Pythona z Gourmet Recipe Manager.
