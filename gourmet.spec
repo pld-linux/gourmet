@@ -19,6 +19,7 @@ BuildRequires:	python-ReportLab
 BuildRequires:	python-gnome-desktop-print
 BuildRequires:	python-pygtk-devel
 BuildRequires:	python-sqlite
+BuildRequires:	rpm-pythonprov
 Requires:	python-%{name} = %{version}-%{release}
 Requires:	python-sqlite
 Suggests:	python-gnome-extras-gtkspell
