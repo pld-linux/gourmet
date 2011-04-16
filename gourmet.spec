@@ -1,16 +1,12 @@
-#
-# TODO:
-#	- check why more translations (including Polish) are not installed
-#
 Summary:	Gourmet Recipe Manager is a simple but powerful recipe-managing application
 Summary(hu.UTF-8):	Gourmet Recipe Manager egy egyszerű, de hatékony recept-nyilvántartó alkalmazás
 Name:		gourmet
-Version:	0.15.7
-Release:	1
+Version:	0.15.9
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://downloads.sourceforge.net/grecipe-manager/%{name}-%{version}.tar.gz
-# Source0-md5:	5e2db5c9e33d9ba7b63b8ce9bdd46395
+# Source0-md5:	7bef5569fb4523747973d83ab69a9a79
 URL:		http://grecipe-manager.sourceforge.net/
 BuildRequires:	intltool
 BuildRequires:	libglade2-devel
@@ -61,6 +57,19 @@ Moduły Pythona z Gourmet Recipe Manager.
 %setup -q
 
 %build
+cd i18n
+mv nl_NL.po nl.po
+mv pt_PT.po pt.po
+mv zh.po zh_CN.po
+rm de.po
+rm sv.po
+rm sv_SE.po
+for file in *.po; do
+	lang=$(echo $file | cut -f 1 -d .)
+	mkdir -p $lang/LC_MESSAGES
+	msgfmt -o $lang/LC_MESSAGES/gourmet.mo $file
+done
+cd ..
 python setup.py build
 
 %install
